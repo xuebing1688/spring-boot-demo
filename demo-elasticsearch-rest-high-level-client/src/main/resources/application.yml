@@ -1,8 +1,11 @@
 demo:
   data:
     elasticsearch:
-      cluster-name: elasticsearch
-      cluster-nodes: 20.20.0.27:9200
+      cluster-name: dabing-es
+      cluster-nodes: 192.168.58.130:9200,192.168.58.131:9200,192.168.58.132:9200
       index:
         number-of-replicas: 0
         number-of-shards: 3
+      account:
+        username: elastic
+        password: feng226688@

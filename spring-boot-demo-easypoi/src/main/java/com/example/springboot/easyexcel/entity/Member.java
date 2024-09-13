@@ -6,10 +6,12 @@ import com.alibaba.excel.annotation.format.DateTimeFormat;
 import com.alibaba.excel.annotation.write.style.ColumnWidth;
 import lombok.Data;
 import com.example.springboot.easyexcel.util.GenderConverter;
+import lombok.Setter;
 
 import java.util.Date;
 
 @Data
+@Setter
 public class Member {
 
     /**
@@ -36,5 +38,6 @@ public class Member {
     @ColumnWidth(10)
     @ExcelProperty(value = "性别", converter = GenderConverter.class)
     private Integer gender;
+
 
 }
