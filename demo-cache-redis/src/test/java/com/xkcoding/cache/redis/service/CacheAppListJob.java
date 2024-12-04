@@ -20,7 +20,7 @@ public class CacheAppListJob {
   // RedisUtil redisUtil;
 
   // 测试把master最新修改rebase到fengxb_01
-
+  // 测试使用merge 看看有没有产生不一样的提交记录
 
 
     /*@PostConstruct
