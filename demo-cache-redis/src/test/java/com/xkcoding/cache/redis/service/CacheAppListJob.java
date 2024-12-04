@@ -19,6 +19,8 @@ public class CacheAppListJob {
   // @Resource
   // RedisUtil redisUtil;
 
+  // 测试把master最新修改rebase到fengxb_01
+
 
 
     /*@PostConstruct
