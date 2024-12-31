@@ -1,5 +1,7 @@
 package com.xkcoding.swagger.controller;
 
+import com.xkcoding.swagger.entity.Constant;
+
 import java.io.FileInputStream;
 import java.io.IOException;
 import java.nio.ByteBuffer;
@@ -95,7 +97,7 @@ public class BinaryParserUtils {
   public static void main(String[] args) {
     try {
       // 读取文件
-      byte[] content = readFile("E:\\myfile\\mywork\\lingcloud\\cpic\\2579_1_2020.txt");
+      byte[] content = readFile(Constant.KAFKA_LOG_PATH);
       ByteBuffer buffer = ByteBuffer.wrap(content).order(ByteOrder.BIG_ENDIAN);
 
       // 解析 Kafka 头
