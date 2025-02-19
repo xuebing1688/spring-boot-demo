@@ -1,25 +1,20 @@
 package com.example.ice.entity;
 
+import lombok.Data;
+import lombok.Getter;
+import lombok.Setter;
+
+@Data
+@Getter
+@Setter
 public class User {
 
     private String name;
     private Integer age;
+    private Student student;
 
-    public String getName() {
-        return name;
-    }
 
-    public void setName(String name) {
-        this.name = name;
-    }
 
-    public Integer getAge() {
-        return age;
-    }
-
-    public void setAge(Integer age) {
-        this.age = age;
-    }
 
     //  重写hashcode和equals方法
     @Override
@@ -32,7 +27,5 @@ public class User {
     public int hashCode() {
         return name.hashCode();
     }
-
-
 
 }

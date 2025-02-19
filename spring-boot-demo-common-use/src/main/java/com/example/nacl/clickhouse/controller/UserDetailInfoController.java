@@ -15,7 +15,7 @@ import java.util.List;
  * @since 2024/5/16
  */
 @RestController
-public class UserInfoController {
+public class UserDetailInfoController {
     @Resource
     private UserInfoService userInfoService;
 

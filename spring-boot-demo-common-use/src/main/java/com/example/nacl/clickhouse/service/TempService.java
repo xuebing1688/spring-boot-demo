@@ -14,4 +14,6 @@ public interface TempService {
     Temp selectById (@Param("id") String id) ;
     // 查询全部
     List<Temp> selectList () ;
+
+    void insertWikiTestData();
 }

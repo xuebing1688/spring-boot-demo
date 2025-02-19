@@ -11,7 +11,7 @@
   <groupId>com.example</groupId>
   <artifactId>common-use</artifactId>
   <version>0.0.1-SNAPSHOT</version>
-  <name>awaysuse</name>
+  <name>common-use</name>
   <description>Demo project for Spring Boot</description>
   <properties>
     <java.version>1.8</java.version>
@@ -195,6 +195,18 @@
        <groupId>com.baomidou</groupId>
        <artifactId>mybatis-plus-boot-starter</artifactId>
        <version>3.1.2</version>
+    </dependency>
+
+    <dependency>
+      <groupId>ru.yandex.clickhouse</groupId>
+      <artifactId>clickhouse-jdbc</artifactId>
+      <version>0.3.2</version>
+    </dependency>
+
+    <dependency>
+      <groupId>com.alibaba</groupId>
+      <artifactId>transmittable-thread-local</artifactId>
+      <version>2.12.6</version>
     </dependency>
 
 

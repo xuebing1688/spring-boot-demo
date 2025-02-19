@@ -29,6 +29,13 @@ public class TempController {
         return tempService.selectList();
     }
 
+    @GetMapping("/insertWikiTestData")
+    public void insertWikiTestData() {
+        tempService.insertWikiTestData();
+    }
+
+
+
 
 
 }

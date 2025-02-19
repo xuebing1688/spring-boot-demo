@@ -87,6 +87,7 @@
     <hutool.version>5.4.5</hutool.version>
     <guava.version>29.0-jre</guava.version>
     <user.agent.version>1.20</user.agent.version>
+    <lombok.version>1.18.26</lombok.version>
   </properties>
 
   <repositories>

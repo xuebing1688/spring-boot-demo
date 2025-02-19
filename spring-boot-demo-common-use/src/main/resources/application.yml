@@ -5,6 +5,14 @@ userinfo:
 server:
   port: 30001
 
+
+spring:
+    datasource:
+      url: jdbc:clickhouse://192.168.58.130:8123/default?socket_timeout=10000&connectTimeout=10000
+      username: default
+      password:
+      driver-class-name: com.clickhouse.jdbc.ClickHouseDriver
+
 #es配置 rest-client
 elasticsearch:
   hosts: 192.168.58.130:9200,192.168.58.131:9200,192.168.58.132:9200

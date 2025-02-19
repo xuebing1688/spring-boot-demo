@@ -1,5 +1,6 @@
 package com.xkcoding.swagger.controller;
 
+ 
 import com.xkcoding.swagger.common.ApiResponse;
 import com.xkcoding.swagger.common.DataType;
 import com.xkcoding.swagger.common.ParamType;
@@ -11,7 +12,7 @@ import io.swagger.annotations.ApiOperation;
 import lombok.extern.slf4j.Slf4j;
 import org.springframework.web.bind.annotation.*;
 import org.springframework.web.multipart.MultipartFile;
-
+ 
 import java.util.List;
 
 /**
@@ -86,4 +87,37 @@ public class UserController {
         log.info(file.getOriginalFilename());
         return file.getOriginalFilename();
     }
+
+
+
+
+
+
+  // 将32位无符号整数进行字节序转换
+  // 将32位无符号整数进行字节序转换
+
+  // 将32位无符号整数进行字节序转换
+  public static long csntoh32(long data) {
+    return ((data & 0xFF000000L) >> 24) |  // 高位字节移到低位
+      ((data & 0x00FF0000L) >> 8)  |  // 次高位字节移到次低位
+      ((data & 0x0000FF00L) << 8)  |  // 次低位字节移到次高位
+      ((data & 0x000000FFL) << 24);   // 低位字节移到高位
+  }
+
+  public static void main(String[] args) {
+    // 输入的32位无符号整数，模拟C++的uint32_t值
+    long input = 4026466304L; // 输入无符号整数，注意范围在[0, 2^32-1]
+
+    // 如果输入值大于0xFFFFFFFF，则取32位的有效部分
+    input = input & 0xFFFFFFFFL;
+
+    // 转换字节序
+    long result = csntoh32(input);
+
+    // 输出结果
+    System.out.println("Input: " + input);  // 输出原始值
+    System.out.println("Output: " + result); // 输出转换后的值，预期为 196551
+  }
+
+
 }

@@ -55,35 +55,35 @@ public class R<T> {
         this.data = null;
     }
 
-    public static <T> R success() {
+    public static R<Void> success() {
         return new R<>(ResultCode.OK, true);
     }
 
-    public static <T> R message(String message) {
+    public static R<Void> message(String message) {
         return new R<>(ResultCode.OK.getCode(), message, true, null);
     }
 
-    public static <T> R success(T data) {
+    public static <T> R<T> success(T data) {
         return new R<>(ResultCode.OK, true, data);
     }
 
-    public static <T> R fail() {
+    public static R<Void> fail() {
         return new R<>(ResultCode.ERROR, false);
     }
 
-    public static <T> R fail(IResultCode resultCode) {
+    public static R<Void> fail(IResultCode resultCode) {
         return new R<>(resultCode, false);
     }
 
-    public static <T> R fail(Integer code, String message) {
+    public static R<Void> fail(Integer code, String message) {
         return new R<>(code, message, false, null);
     }
 
-    public static <T> R fail(IResultCode resultCode, T data) {
+    public static <T> R<T> fail(IResultCode resultCode, T data) {
         return new R<>(resultCode, false, data);
     }
 
-    public static <T> R fail(Integer code, String message, T data) {
+    public static <T> R<T> fail(Integer code, String message, T data) {
         return new R<>(code, message, false, data);
     }
 
