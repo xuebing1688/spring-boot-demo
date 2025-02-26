@@ -16,4 +16,6 @@ public interface TempService {
     List<Temp> selectList () ;
 
     void insertWikiTestData();
+
+    //void insertMonitorMetricData();
 }
